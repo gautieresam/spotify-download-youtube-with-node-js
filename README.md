@@ -15,7 +15,7 @@ Il faut installer le paquet en ligne de commande. (voir la documentation si beso
 Spotdl est un outil capable de convertir l'url d'une playlist spotify en fichier texte. Le fichier texte contient alors des titres à télècharger via youtube. 
 
 ## Lancement de app.js pour lancer l'app : 
-Le fichier package.json contient les modules pour faire focntionner l'application. 
+Le fichier package.json contient les modules pour faire focntionner l'application. Dans le répertoire courant dans un terminal : npm i. Ceci va créer un répertoire node_modules avec les modules. 
 Ouvrir un terminal, et lancer node app.js. Dès à present vous pouvez ouvrir un navigateur web et taper l'url suivante "localhost:8888/" 
 
 ## Explication du fonctionnement générale : 
