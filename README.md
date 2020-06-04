@@ -6,6 +6,8 @@ download-playlist-spotify utilise l'API spotify et spotdl un outil de conversion
 Le lien de l'application spotdl en ligne de commande : https://github.com/ritiek/spotify-downloader.git
 le lien vers l'api spotify : https://developer.spotify.com/documentation/web-api/ 
 
+ATTENTION LINUX UNIQUEMNT !!
+
 ## Préambule : API spotify 
 L'application utilise l'API spotify, il faut dans un premier temps avoir un compte spotify se connecter au site mentionné au-dessus. L'onglet dashbord va permettre d'enregistrer votre application auprès de spotify. Pour cela il faut demander un client id et renseigner les différents champs. A la question  "What are you building?" répondre "web". Cliquer sur next et "non-commercial". Spotify va alors vous donner un client id et un client secret. Il faut les renseigner dans les variables de app.js prevu à cet effet. Dans l'onglet "edit setting" redirect URIs vous devez mettre "http://localhost:8888/callback" si vous travaillez en local. La configuration de l'API spotify est terminé. L'onglet dashbord permet de visualiser le trafic des requêtes vers l'API.
 
