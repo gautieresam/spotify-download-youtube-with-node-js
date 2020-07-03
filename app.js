@@ -2,13 +2,12 @@
     var express = require('express'); // Express web server framework
     var request = require('request'); // "Request" library
     var cors = require('cors');
-    var querystring = require('querystring');
+    var querystring = require('querystring'); // Qs
     var cookieParser = require('cookie-parser');
 
     var client_id = '712d661608f94d3e916982f83b9e6f36'; // Your client id
     var client_secret = 'b1505158b78942a6b167f93f3c2a4434'; // Your secret
     var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
-
 
     var exec = require('child_process').exec, child;
     var nodemailer = require('nodemailer');
@@ -196,26 +195,18 @@ app.get('/dlplaylist', function(req, res) {
                 // Creation d'un numero unique, si 2 personnes veulent télècharger une playlist avec un même nom.
                 var numeroUniquePlaylist = generateRandomString(20);
 
-
-
                 // Création d'une variable sous le format : <numeroUnique><nomDeLaPlaylist>
                 var sansLePointTxtnameFileDlavecNumero=numeroUniquePlaylist;
                 sansLePointTxtnameFileDlavecNumero=sansLePointTxtnameFileDlavecNumero.concat(sansLePointTxtnameFileDl[0]);
 
-                console.log("sansLePointTxtnameFileDlavecNumero")
-                console.log(sansLePointTxtnameFileDlavecNumero);
-
                 // Le fichier créé par spotdl est déplacé dans list
                 copierColler(nameFileDl[5],numeroUniquePlaylist); // good
-
                 // Un repertoire dans playlist va être créé.
                 // Format du nom du repertoire : <numeroUnique><nomDeLaPlaylist>
                 creationRepertoirePlaylist(sansLePointTxtnameFileDlavecNumero);
 
-                // Télèchargement
+                // Télèchargement des musiques
                 downloadMusicPlaylist(sansLePointTxtnameFileDlavecNumero);
-
-// Revoir indentation
 
     function downloadMusicPlaylist(fileName){
 
@@ -241,8 +232,6 @@ app.get('/dlplaylist', function(req, res) {
 
 
     function supprimerLeFichierTxt(fileName){
-
-        // Etape 1 : suppresion dans le repertoire list
         console.log("Supprimer le fichier txt dans list")
         console.log(fileName)
         const { exec } = require('child_process');
@@ -354,6 +343,10 @@ app.get('/dlplaylist', function(req, res) {
         lienUser=nameZip;
     }
 
+
+
+
+
     function envoyerMail(){
 
         var transporter = nodemailer.createTransport({
@@ -385,11 +378,9 @@ app.get('/dlplaylist', function(req, res) {
     }
 
 
+
+
     function SupprimerLaPlaylistDuRepertoire(fileName) {
-
-        console.log("Function SupprimerLaPlaylistDuRepertoire etape 1 :")
-
-        // Etape 1 : supprimer le contenu du repertoire dans le repertoire playlist/<mon_rep_à_supp>/*
 
         const { exec } = require('child_process');
         exec('rm  playlists/'+fileName+'/*', (err, stdout, stderr) => {
@@ -402,9 +393,6 @@ app.get('/dlplaylist', function(req, res) {
                 console.log(`stderr: ${stderr}`);
             }
         });
-
-        // Etape 2 : supprimer le repertoire
-        console.log("Function SupprimerLaPlaylistDuRepertoire etape 2 :")
 
         exec('rmdir  playlists/'+fileName, (err, stdout, stderr) => {
             if (err) {
