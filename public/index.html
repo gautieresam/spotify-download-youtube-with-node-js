@@ -60,7 +60,11 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script>
       (function() {
-
+        /** 
+         * 
+         *  TEST GIT 
+         * 
+         * /
         /**
          * Obtains parameters from the hash of the URL
          * @return Object
@@ -72,6 +76,7 @@
           while ( e = r.exec(q)) {
              hashParams[e[1]] = decodeURIComponent(e[2]);
           }
+          console.log("titi");
           return hashParams;
         }
 
