@@ -352,8 +352,8 @@ app.get('/dlplaylist', function(req, res) {
         var transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {
-                user: 'spotifyappdl@gmail.com',
-                pass: 'gautierspotify'
+                user: '',
+                pass: ''
             }
         });
 
