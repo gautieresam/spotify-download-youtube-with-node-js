@@ -1,5 +1,5 @@
 ## download-playlist-spotify
-download-playlist-spotify est une application web qui permet de télècharger vos playlists spotify en mp3 peu importe la taille de la playlist ! Lorsque votre playlist est prête un mail est envoyé avec le lien de télèchargement. L'application ne nécessite pas de compte spotify prenium !
+Download-playlist-spotify est une application web qui permet de télècharger vos playlists spotify en mp3 peu importe la taille de la playlist ! Lorsque votre playlist est prête un mail est envoyé avec le lien de télèchargement. L'application ne nécessite pas de compte spotify prenium !
 
 download-playlist-spotify utilise l'API spotify et spotdl un outil de conversion mp3 open source. L'application utilise node.js pour traiter les requêtes.
 
