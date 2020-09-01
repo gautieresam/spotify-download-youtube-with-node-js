@@ -18,7 +18,7 @@ Spotdl est un outil capable de convertir l'url d'une playlist spotify en fichier
 
 ## Lancement de app.js pour lancer l'application web :
 Le fichier package.json contient les modules pour faire focntionner l'application. Dans le répertoire courant dans un terminal : npm i. Ceci va créer un répertoire node_modules avec les modules pour le fonctionnement. 
-Ouvrir un terminal, et lancer node app.js. Dès à present vous pouvez ouvrir un navigateur web et taper l'url suivante "localhost:8888/"
+Ouvrir un terminal, et lancer node app.js. Dès à present vous pouvez ouvrir un navigateur web et taper l'url suivante "localhost:8888/". Dans le fichier app.js ajouter son mail & mot de passe il s'agit de l'adresse du mail qui va être envoyé aux clients avec le lien ! 
 
 ## Explication du fonctionnement général :
 Lors du lancement de l'application sur un navigateur. L'application va envoyer ses identifiants (clientId & clientSecret) à l'API spotify. L'application va ainsi recevoir un token d'identification (voir documentation API spotify). Ce token va être utilisé pour faire les requêtes vers l'API spotify par la suite.
