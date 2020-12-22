@@ -5,8 +5,8 @@
     var querystring = require('querystring'); // Qs
     var cookieParser = require('cookie-parser');
 
-    var client_id = '712d661608f94d3e916982f83b9e6f36'; // Your client id
-    var client_secret = 'b1505158b78942a6b167f93f3c2a4434'; // Your secret
+    var client_id = ''; // Your client id
+    var client_secret = ''; // Your secret
     var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
     var exec = require('child_process').exec, child;
